@@ -109,7 +109,10 @@
 
 		var url_string = window.location.href.replace("#","&"); //window.location.href
 		var url = new URL(url_string);
-		var c = url.searchParams.get("access_token");
-		console.log(c);
+		var access_token = url.searchParams.get("access_token");
+
+		$.get( "https://graph.facebook.com/v3.1/me?fields=id%2Cname&access_token="+access_token, function( data ) {
+		  console.log(data);
+		});
 	});
 </script>
