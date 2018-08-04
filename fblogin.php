@@ -1,15 +1,18 @@
 <?php 
 
+echo "PHP_SELF = ".$_SERVER['PHP_SELF'] . "<br>";
+echo "REQUEST_URI = ".$_SERVER['REQUEST_URI'] . "<br>";
 
-$myurl = $_SERVER['REQUEST_URI'];
 
-$parse = parse_url($myurl, PHP_URL_FRAGMENT);
+// $myurl = $_SERVER['REQUEST_URI'];
 
-echo "<pre>";
-print_r($prase);
-echo "</pre>";
+// $parse = parse_url($myurl, PHP_URL_FRAGMENT);
 
-$access_token = $_GET['access_token'];
+// echo "<pre>";
+// print_r($prase);
+// echo "</pre>";
+
+// $access_token = $_GET['access_token'];
 
 //redirect("http://songyim.eventhive.in.th/index.php/Signin/fbsignin?");
 
