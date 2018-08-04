@@ -1,6 +1,6 @@
 <?php 
 
-print_r($_REQUEST);
+print_r($_SERVER["REQUEST_URI"]);
 $access_token = $_GET['access_token'];
 //redirect("http://songyim.eventhive.in.th/index.php/Signin/fbsignin?");
 
