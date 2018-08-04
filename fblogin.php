@@ -5,9 +5,13 @@
 
 // $parse = parse_url($myurl, PHP_URL_FRAGMENT);
 
-echo "<pre>";
-print_r($_GET);
-echo "</pre>";
+
+$url=parse_url("getCurrentURL()#access_token");
+echo $url["fragment"]; //This variable contains the fragment
+
+// echo "<pre>";
+// print_r($_GET);
+// echo "</pre>";
 
 // $access_token = $_GET['access_token'];
 
@@ -23,12 +27,12 @@ echo "</pre>";
 
 function getCurrentURL()
 {
-    $protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']), 'https') === false ? 'http' : 'https';
+    //$protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']), 'https') === false ? 'http' : 'https';
     $host = $_SERVER['HTTP_HOST'];
     $script = $_SERVER['SCRIPT_NAME'];
     $params = $_SERVER['QUERY_STRING'] == '' ? '' : '?' . $_SERVER['QUERY_STRING'];
 
-    return $protocol . '://' . $host . $script . $params;
+    return 'https://' . $host . $script . $params;
 }
 
 ?>
