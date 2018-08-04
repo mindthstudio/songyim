@@ -6,16 +6,16 @@
 // $parse = parse_url($myurl, PHP_URL_FRAGMENT);
 
 
-$url=getCurrentURL();
-var_dump(parse_url($url));
-var_dump(parse_url($url, PHP_URL_SCHEME));
-var_dump(parse_url($url, PHP_URL_USER));
-var_dump(parse_url($url, PHP_URL_PASS));
-var_dump(parse_url($url, PHP_URL_HOST));
-var_dump(parse_url($url, PHP_URL_PORT));
-var_dump(parse_url($url, PHP_URL_PATH));
-var_dump(parse_url($url, PHP_URL_QUERY));
-var_dump(parse_url($url, PHP_URL_FRAGMENT));
+// $url=getCurrentURL();
+// var_dump(parse_url($url));
+// var_dump(parse_url($url, PHP_URL_SCHEME));
+// var_dump(parse_url($url, PHP_URL_USER));
+// var_dump(parse_url($url, PHP_URL_PASS));
+// var_dump(parse_url($url, PHP_URL_HOST));
+// var_dump(parse_url($url, PHP_URL_PORT));
+// var_dump(parse_url($url, PHP_URL_PATH));
+// var_dump(parse_url($url, PHP_URL_QUERY));
+// var_dump(parse_url($url, PHP_URL_FRAGMENT));
 
 // echo "<pre>";
 // print_r($_GET);
@@ -33,14 +33,18 @@ var_dump(parse_url($url, PHP_URL_FRAGMENT));
 
 // echo $content;
 
-function getCurrentURL()
-{
-    //$protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']), 'https') === false ? 'http' : 'https';
-    $host = $_SERVER['HTTP_HOST'];
-    $script = $_SERVER['SCRIPT_NAME'];
-    $params = $_SERVER['QUERY_STRING'] == '' ? '' : '?' . $_SERVER['QUERY_STRING'];
+// function getCurrentURL()
+// {
+//     //$protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']), 'https') === false ? 'http' : 'https';
+//     $host = $_SERVER['HTTP_HOST'];
+//     $script = $_SERVER['SCRIPT_NAME'];
+//     $params = $_SERVER['QUERY_STRING'] == '' ? '' : '?' . $_SERVER['QUERY_STRING'];
 
-    return 'https://' . $host . $script . $params;
-}
+//     return 'https://' . $host . $script . $params;
+// }
+
+$dir = dirname(__FILE__);
+echo "<p>Full path to this dir: " . $dir . "</p>";
+echo "<p>Full path to a .htpasswd file in this dir: " . $dir . "/.htpasswd" . "</p>";
 
 ?>
