@@ -6,8 +6,9 @@ $access_token = $_GET['code'];
 $url  = "https://graph.facebook.com/v3.1/me?fields=id%2Cname&access_token=$access_token";
 $content = file_get_contents($url);
 
-echo "<pre>";
-print_r($content);
-echo "</pre>";
+echo "$url";
+echo "<br>";
+
+echo $content;
 
 ?>
