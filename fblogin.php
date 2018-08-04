@@ -6,8 +6,16 @@
 // $parse = parse_url($myurl, PHP_URL_FRAGMENT);
 
 
-$url=parse_url("getCurrentURL()#access_token");
-echo $url["fragment"]; //This variable contains the fragment
+$url=getCurrentURL();
+var_dump(parse_url($url));
+var_dump(parse_url($url, PHP_URL_SCHEME));
+var_dump(parse_url($url, PHP_URL_USER));
+var_dump(parse_url($url, PHP_URL_PASS));
+var_dump(parse_url($url, PHP_URL_HOST));
+var_dump(parse_url($url, PHP_URL_PORT));
+var_dump(parse_url($url, PHP_URL_PATH));
+var_dump(parse_url($url, PHP_URL_QUERY));
+var_dump(parse_url($url, PHP_URL_FRAGMENT));
 
 // echo "<pre>";
 // print_r($_GET);
