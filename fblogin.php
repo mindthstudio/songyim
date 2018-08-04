@@ -99,8 +99,17 @@
 
 ?>
 
-
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-	
 	console.log(window.location.href);
+
+	$(() => {
+
+		var type = window.location.hash.substr(1);
+
+		var url_string = window.location.href.replace("#","&"); //window.location.href
+		var url = new URL(url_string);
+		var c = url.searchParams.get("access_token");
+		console.log(c);
+	});
 </script>
