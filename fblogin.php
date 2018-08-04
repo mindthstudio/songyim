@@ -1,6 +1,6 @@
 <?php 
 
-echo "listen = ".$_GET["#access_token"];
+echo "listen = ".getCurrentURL();
 
 // $myurl = $_SERVER['REQUEST_URI'];
 
@@ -21,5 +21,15 @@ echo "listen = ".$_GET["#access_token"];
 // echo "<br>";
 
 // echo $content;
+
+function getCurrentURL()
+{
+    $protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']), 'https') === false ? 'http' : 'https';
+    $host = $_SERVER['HTTP_HOST'];
+    $script = $_SERVER['SCRIPT_NAME'];
+    $params = $_SERVER['QUERY_STRING'] == '' ? '' : '?' . $_SERVER['QUERY_STRING'];
+
+    return $protocol . '://' . $host . $script . $params;
+}
 
 ?>
