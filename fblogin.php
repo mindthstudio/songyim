@@ -1,10 +1,6 @@
 <?php 
 
-echo "PHP_SELF = ".$_SERVER['PHP_SELF'] . "<br>";
-echo "REQUEST_URI = ".$_SERVER['REQUEST_URI'] . "<br>";
-$actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].$_SERVER['QUERY_STRING'];
-echo "$actual_link<br>";
-echo "prase = " . sparse_url($actual_link, PHP_URL_FRAGMENT);
+echo "listen = ".$_GET["#access_token"];
 
 // $myurl = $_SERVER['REQUEST_URI'];
 
