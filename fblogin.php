@@ -2,7 +2,8 @@
 
 echo "PHP_SELF = ".$_SERVER['PHP_SELF'] . "<br>";
 echo "REQUEST_URI = ".$_SERVER['REQUEST_URI'] . "<br>";
-
+$actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+echo $actual_link;
 
 // $myurl = $_SERVER['REQUEST_URI'];
 
