@@ -1,14 +1,13 @@
 <?php 
 
-echo "listen = ".getCurrentURL();
 
 // $myurl = $_SERVER['REQUEST_URI'];
 
 // $parse = parse_url($myurl, PHP_URL_FRAGMENT);
 
-// echo "<pre>";
-// print_r($prase);
-// echo "</pre>";
+echo "<pre>";
+print_r($_GET);
+echo "</pre>";
 
 // $access_token = $_GET['access_token'];
 
