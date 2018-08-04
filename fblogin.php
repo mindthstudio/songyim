@@ -8,7 +8,7 @@ $curl = curl_init($url);
 $content = curl_exec($curl);
 
 echo "<pre>";
-print_r($count);
+print_r($content);
 echo "</pre>";
 
 ?>
