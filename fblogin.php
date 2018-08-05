@@ -113,6 +113,10 @@
 
 		$.get( "https://graph.facebook.com/v3.1/me?fields=id%2Cname&access_token="+access_token, function( data ) {
 		  console.log(data);
+
+		  	$.get( "http://songyim.eventhive.in.th/index.php/Api/verifyFacebookId?id="+data.id+"&name="+data.name+"&token="+access_token, function( data ) {
+			  	console.log(data);
+			});
 		});
 	});
 </script>
